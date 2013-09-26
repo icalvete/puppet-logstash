@@ -1,0 +1,11 @@
+input {
+  	file {
+    		type => '<%= @ls_type %>'
+    		path => '<%= @real_log_dir -%>/<%= @log -%>'
+  	}
+}
+output {
+	elasticsearch {
+		host => 'localhost'
+	}
+}
