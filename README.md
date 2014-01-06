@@ -26,8 +26,8 @@ See [logstash](http://logstash.net/)
       class {'roles::logstash_server':
         ls_type        => 'sp',
         ls_type_source => 'sp',
-        log_dir        => hiera('sp_log_dir'),
-        log            => hiera('sp_log')
+        log_dir        => hiera('syslog_log_dir'),
+        log            => hiera('syslog_log')
       }
 
       Class['roles::elasticsearch_server']->Class['roles::logstash_server']
