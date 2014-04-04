@@ -37,7 +37,7 @@ See [logstash](http://logstash.net/)
 
 Where **$config_dir/modules/sp/modules/sp/templates/logstash_sp.conf.erb** contains ...
 
-```
+```bash
     input {
       file {
         type         => '<%= @ls_type %>'
