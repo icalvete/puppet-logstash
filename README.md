@@ -17,6 +17,7 @@ See [logstash](http://logstash.net/)
 
 ##Examples:
 
+```puppet
     node 'os02.smartpurposes.net' inherits sp_defaults {
 
       include roles::puppet_agent
@@ -32,9 +33,11 @@ See [logstash](http://logstash.net/)
 
       Class['roles::elasticsearch_server']->Class['roles::logstash_server']
     }
+```
 
 Where **$config_dir/modules/sp/modules/sp/templates/logstash_sp.conf.erb** contains ...
 
+```
     input {
       file {
         type         => '<%= @ls_type %>'
@@ -66,6 +69,7 @@ Where **$config_dir/modules/sp/modules/sp/templates/logstash_sp.conf.erb** conta
         node_name => 'logstash_<%= @ls_type %>_<%= @hostname %>'
       }
     }
+```
 
 ##TODO:
 
