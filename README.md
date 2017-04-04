@@ -1,4 +1,4 @@
-#puppet-logstash
+# puppet-logstash
 
 Puppet manifest to install and configure logstash
 
@@ -6,16 +6,16 @@ Puppet manifest to install and configure logstash
 
 See [logstash](http://logstash.net/)
 
-##Actions:
+## Actions:
 
 * Install logstash
 * Deploy any configuration
 
-##Requires:
+## Requires:
 
 * [hiera](http://docs.puppetlabs.com/hiera/1/index.html)
 
-##Examples:
+## Examples:
 
 ```puppet
     node 'os02.smartpurposes.net' inherits sp_defaults {
@@ -71,10 +71,10 @@ Where **$config_dir/modules/sp/modules/sp/templates/logstash_sp.conf.erb** conta
     }
 ```
 
-##TODO:
+## TODO:
 
 * Documentation
 
-##Authors:
+## Authors:
 		 
 Israel Calvete Talavera <icalvete@gmail.com>
